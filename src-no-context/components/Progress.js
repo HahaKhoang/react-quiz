@@ -1,7 +1,4 @@
-import { useQuiz } from "../contexts/QuizContext";
-
-function Progress() {
-  const { numQuestions, maxPossiblePoints, index, answer, points } = useQuiz();
+function Progress({ index, numQuestions, points, maxPossiblePoints, answer }) {
   return (
     <header className="progress">
       <progress max={numQuestions} value={index + +(answer !== null)} />
